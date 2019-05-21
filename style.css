@@ -1,0 +1,76 @@
+.animation {
+    display: flex;
+    flex-wrap: wrap; 
+    background-color: rgb(127, 229, 255);
+    width: 1000px;
+    height: 250px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+
+@keyframes cloud {
+    100% {
+        transform: translateX(50px);
+        top: 100%;
+    }
+}
+    
+
+.cloud {
+    background: url(icons/nube1.png)  no-repeat;
+    height: 100px;
+    width: 100px;
+    animation: 1s cloud infinite;
+    box-sizing: border-box;
+    position: absolute;
+    top: -150px;
+    left: 100px;
+}
+
+@keyframes fly {
+    0{
+        top: 20px;
+    }
+    
+    100% {
+        transform: translate(5px,50px);
+    }
+}
+
+@keyframes firefly {
+    100% {
+        transform: translateX(3px);
+    }
+}
+
+.man {
+    background: url(icons/hombre.png) center no-repeat;
+    height: 200px;
+    width: 150px;
+    animation: fly 0.5s infinite alternate ease-in-out;
+    position: relative;
+    margin: 0 auto;
+}
+
+.man:before {
+    content: "";
+    position: absolute;
+    background: url(icons/fuego.png) no-repeat;
+    width: 35px;
+    height: 35px;
+    animation: firefly 0.5s infinite alternate ease-in-out;
+    left: 96px;
+    top: 144px;
+}
+
+.cloud2 {
+    background: url(icons/nube2.png) no-repeat;
+    height: 100px;
+    width: 100px;
+    animation: 0.5s cloud infinite;
+    position: absolute;
+    top: -100px;
+    left: 650px;
+}
